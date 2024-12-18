@@ -1,4 +1,4 @@
-# Project-Personal-Portfolio-Website
+# Kamal Portfolio Website
 
 ### **Project: Personal Portfolio Website**
  
