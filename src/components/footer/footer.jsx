@@ -6,7 +6,10 @@ export default function Footer() {
     <footer className="footer">
       <p>
         Check out my github profile:
-        <a href="https://github.com/Aakritinp" target="_blank">
+        <a
+          href="https://github.com/Kamalgrg300?tab=repositories"
+          target="_blank"
+        >
           GitHub
         </a>
       </p>
