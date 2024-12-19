@@ -1,6 +1,6 @@
 import "./portfolio.css";
 
-function Portfolio() {
+export default function Portfolio() {
   return (
     <div>
       <header className="header">
@@ -26,5 +26,3 @@ function Portfolio() {
     </div>
   );
 }
-
-export default Portfolio;
