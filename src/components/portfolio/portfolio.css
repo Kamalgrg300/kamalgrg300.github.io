@@ -1,7 +1,12 @@
 .title {
   color: white;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .header {
   background-color: green;
+  padding: 1rem;
+  text-align: center;
+  color: white;
 }

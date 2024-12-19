@@ -1,7 +1,6 @@
 import "./footer.css";
 
 export default function Footer() {
-  // location to write js for footer component
   return (
     <footer className="footer">
       <p>
@@ -9,6 +8,7 @@ export default function Footer() {
         <a
           href="https://github.com/Kamalgrg300?tab=repositories"
           target="_blank"
+          rel="noopener noreferrer"
         >
           GitHub
         </a>

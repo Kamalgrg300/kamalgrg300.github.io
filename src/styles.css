@@ -1,0 +1,58 @@
+/* Navigation styles */
+.navigation {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navigation a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* Portfolio styles */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.portfolio-item {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  margin: 1rem;
+  padding: 1rem;
+  width: calc(33% - 2rem);
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Page styles */
+.page {
+  margin: 2rem;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 2rem;
+}
+
+.padding {
+  padding: 1rem;
+}

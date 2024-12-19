@@ -1,7 +1,15 @@
 .nav {
-  background-color: rgb(33, 92, 154);
-  color: white;
   display: flex;
-  justify-content: space-evenly;
-  padding: 10px;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.nav div {
+  color: white;
+  cursor: pointer;
+}
+
+.nav div:hover {
+  text-decoration: underline;
 }
