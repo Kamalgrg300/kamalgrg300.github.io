@@ -1,15 +1,26 @@
-.nav {
-  display: flex;
-  justify-content: space-around;
+.navigation {
   background-color: #333;
-  padding: 1rem;
+  overflow: hidden;
 }
 
-.nav div {
+.navigation div {
+  float: left;
+}
+
+.navigation a {
+  display: block;
   color: white;
-  cursor: pointer;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.nav div:hover {
-  text-decoration: underline;
+.navigation a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navigation a.active {
+  background-color: #4caf50;
+  color: white;
 }
