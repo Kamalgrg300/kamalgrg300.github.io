@@ -58,44 +58,80 @@ body {
 }
 
 /* Skills Section Styles */
-.mySkills {
+.mySkills,
+.coreTechSkills,
+.professionalExperience {
   text-align: left;
   margin: 2rem 0;
 }
 
-.mySkills h2 {
+.mySkills h2,
+.coreTechSkills h2,
+.professionalExperience h2 {
   color: #333;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.mySkills table {
+.mySkills table,
+.coreTechSkills table {
   width: 100%;
   border-collapse: collapse;
 }
 
 .mySkills th,
-.mySkills td {
+.mySkills td,
+.coreTechSkills th,
+.coreTechSkills td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
 
-.mySkills th {
+.mySkills th,
+.coreTechSkills th {
   background-color: #4caf50;
   color: white;
 }
 
-.mySkills tr:nth-child(even) {
+.mySkills tr:nth-child(even),
+.coreTechSkills tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-.mySkills tr:hover {
+.mySkills tr:hover,
+.coreTechSkills tr:hover {
   background-color: #ddd;
 }
 
 .mySkills td i {
   font-size: 1.5rem;
+}
+
+/* Professional Experience Styles */
+.professionalExperience .experience-item {
+  margin-bottom: 2rem;
+}
+
+.professionalExperience h3 {
+  color: #4caf50;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.professionalExperience .duration {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.professionalExperience ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.professionalExperience ul li {
+  margin-bottom: 0.5rem;
 }
 
 /* Picture Styles */
@@ -107,6 +143,208 @@ body {
   height: 150px;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Title Styles */
+.title {
+  color: #333;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Header Styles */
+.header {
+  background-color: #4caf50;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* Portfolio Container Styles */
+.portfolio {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Content Container Styles */
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.content-container img {
+  flex: 1;
+  max-width: 150px;
+  margin-right: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-container p {
+  flex: 2;
+}
+
+/* Skills Section Styles */
+.mySkills,
+.coreTechSkills,
+.projects {
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.mySkills h2,
+.coreTechSkills h2,
+.projects h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mySkills table,
+.coreTechSkills table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mySkills th,
+.mySkills td,
+.coreTechSkills th,
+.coreTechSkills td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.mySkills th,
+.coreTechSkills th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.mySkills tr:nth-child(even),
+.coreTechSkills tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.mySkills tr:hover,
+.coreTechSkills tr:hover {
+  background-color: #ddd;
+}
+
+.mySkills td i {
+  font-size: 1.5rem;
+}
+
+/* Projects Section Styles */
+.projects {
+  margin: 2rem 0;
+}
+
+.projects h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+  color: #4caf50;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-item ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.project-item ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Picture Styles */
+.myPicture {
+  border-radius: 50%;
+  display: block;
+  margin: 1rem auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form Styles */
+.contactForm {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.contactForm h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm input[type="tel"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contactForm input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contactForm input[type="submit"]:hover {
+  background-color: #45a049;
 }
 
 /* Contact Form Styles */
