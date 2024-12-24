@@ -1,0 +1,111 @@
+/* Main container for the Skills section */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align at the top */
+  padding: 20px;
+  gap: 30px;
+}
+
+/* Main Skills Section */
+#skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  flex: 1;
+}
+
+/* Title Section */
+#skills h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000; /* Black text */
+  text-align: center; /* Center text horizontally */
+  margin-bottom: 20px;
+  width: 100%; /* Ensure it spans the container */
+}
+
+/* Skills container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Ensure equal spacing */
+  gap: 15px; /* Reduce gap for more compact layout */
+  align-items: center;
+}
+
+/* Skill item style */
+.skill-item {
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  padding: 10px; /* Reduced padding */
+  border-radius: 10px;
+  font-size: 0.9rem; /* Slightly smaller font */
+  font-weight: 600;
+  width: 120px; /* Smaller width */
+  height: 120px; /* Smaller height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+  opacity: 0; /* Hidden by default */
+  transform: translateX(50px); /* Positioned off-screen to the right */
+  animation: slideInFromRight 0.8s forwards; /* Animation applied */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Text aligned at the bottom */
+  align-items: center; /* Centered horizontally */
+  gap: 8px; /* Space between logo and text */
+  text-align: center;
+}
+
+/* Animation for sliding in from right */
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); /* Start from right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Slide to original position */
+  }
+}
+
+/* Skill logo inside each skill item */
+.skill-item img {
+  width: 40px; /* Logo size */
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth transition for logo scaling */
+}
+
+/* Hover effect for skill items */
+.skill-item:hover {
+  transform: scale(1.1); /* Slightly enlarge the item */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  cursor: pointer; /* Indicate that it's interactive */
+}
+
+/* Hover effect for logo */
+.skill-item:hover img {
+  transform: scale(1.2); /* Enlarge the logo on hover */
+}
+
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+  /* Stack the sections vertically */
+  .container {
+    flex-direction: column; /* Stacks the sections vertically */
+    align-items: center;
+  }
+
+  .skills-container {
+    flex-direction: column; /* Stack skills vertically on small screens */
+    align-items: center;
+  }
+
+  .skill-item {
+    width: 80%; /* Takes up most of the screen width on mobile */
+    height: auto; /* Auto adjust height for better spacing */
+    margin-bottom: 10px; /* Adds space between items */
+  }
+}

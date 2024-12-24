@@ -1,26 +1,83 @@
+/* Base styling for the navigation bar */
 .navigation {
-  background-color: #333;
-  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Center the navigation links */
+  align-items: center; /* Vertically align links */
+  background-color: #333; /* Dark background for contrast */
+  padding: 15px 30px; /* Adjust padding for a cleaner look */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Modern shadow for depth */
+  position: relative; /* For positioning when in mobile view */
+  z-index: 10; /* Ensure the nav stays on top */
+  border-radius: 0; /* No rounded corners for horizontal nav */
 }
 
+/* Style for navigation links */
 .navigation div {
-  float: left;
+  margin: 0 15px; /* Add space between the navigation items */
 }
 
 .navigation a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.1rem; /* Slightly smaller text for a modern feel */
+  font-weight: 500; /* Slightly lighter font for a clean look */
+  padding: 10px 20px; /* Adjust padding for balance */
+  border-radius: 20px; /* Rounded corners for each link */
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smooth hover effect */
+  display: inline-block; /* Make it behave like a button */
 }
 
+/* Hover effect for navigation links */
 .navigation a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #00bcd4; /* Light cyan background on hover */
+  color: #333; /* Darken the text color */
+  transform: translateY(-2px); /* Slight upward movement on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow effect on hover */
 }
 
-.navigation a.active {
-  background-color: #4caf50;
-  color: white;
+/* Active effect for navigation links */
+.navigation a:active {
+  background-color: #0097a7; /* Darker cyan when clicked */
+  transform: translateY(0); /* Remove upward movement */
+  box-shadow: none; /* Remove shadow on click */
+}
+
+/* Mobile (small screens) styles */
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column; /* Change layout to vertical */
+    position: fixed; /* Position the nav at the top-left of the screen */
+    top: 10px;
+    left: 10px;
+    width: auto; /* Only take up required width */
+    height: auto; /* Only take up required height */
+    justify-content: flex-start; /* Align items to the top */
+    padding: 15px;
+    background-color: #333;
+    z-index: 999; /* Ensure it's on top */
+    margin: 10px; /* Add some margin to avoid sticking to the edges */
+    border-radius: 20px; /* Rounded corners for mobile view */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow for contrast */
+  }
+
+  .navigation div {
+    width: auto; /* Make each link only take as much space as required */
+    text-align: left; /* Align links to the left */
+    margin: 10px 0; /* Add spacing between links */
+  }
+
+  .navigation a {
+    display: block; /* Make links block level in mobile */
+    width: auto; /* Links should only take up the space they need */
+    padding: 12px 20px; /* Larger padding for better touch targets */
+    text-align: left; /* Align text to the left */
+    border-radius: 20px; /* Keep rounded corners for mobile */
+  }
+
+  .navigation a:hover {
+    background-color: #00bcd4; /* Keep hover effect for mobile */
+    color: #333;
+    transform: translateY(-2px); /* Slight upward movement */
+  }
 }

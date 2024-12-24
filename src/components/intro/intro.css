@@ -1,0 +1,116 @@
+:root {
+  /* CSS HEX */
+  /* CSS HEX */
+  --isabelline: #edede9ff;
+  --timberwolf: #d6ccc2ff;
+  --linen: #f5ebe0ff;
+  --champagne-pink: #e3d5caff;
+  --pale-dogwood: #d5bdafff;
+}
+
+/* General reset */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: var(--khaki);
+  color: var(--dark-green);
+}
+
+/* Header styling */
+.header {
+  background: var(--pakistan-green);
+  color: var(--non-photo-blue);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .title {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--non-photo-blue);
+}
+
+/* About me container */
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: var(--blue-munsell);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Profile Picture */
+.myPicture {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid var(--non-photo-blue);
+}
+
+.myPicture:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* About Me Text */
+.about-me p {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--khaki);
+  margin: 0;
+}
+
+.about-me p::first-line {
+  font-weight: bold;
+  color: var(--non-photo-blue);
+}
+
+/* Hover Effect for the Card */
+.about-me:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .myPicture {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-me p {
+    font-size: 1rem;
+  }
+}

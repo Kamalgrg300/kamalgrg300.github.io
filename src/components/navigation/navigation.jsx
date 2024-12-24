@@ -2,17 +2,27 @@ import "./navigation.css";
 
 export default function Navigation() {
   return (
-    <nav className="navigation">
-      <div>
-        <a href="./portfolio.html">Home</a>
-      </div>
-      <div>
-        <a href="./contact.html">Contact</a>
-      </div>
+    <div>
+      <nav className="navigation">
+        <div>
+          <a href="#about">About</a>
+        </div>
 
-      <div>
-        <a href="./about.html">About</a>
-      </div>
-    </nav>
+        <div>
+          <a href="#journey">My Journey</a>
+        </div>
+        <div>
+          <a href="#projects-kamal">Projects</a>
+        </div>
+
+        <div>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <header className="header">
+        <h1 className="title">Kamal Gurung</h1>
+      </header>
+    </div>
   );
 }

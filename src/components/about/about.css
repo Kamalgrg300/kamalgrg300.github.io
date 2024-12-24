@@ -1,0 +1,58 @@
+/* about.css */
+
+/* Main container that holds both Intro and Skills sections */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Full viewport height */
+  padding: 20px;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+/* Flex container for Intro and Skills sections */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Stretch the child sections to full height */
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  gap: 30px; /* Space between sections */
+}
+
+/* Ensures both sections have equal width and height */
+#home,
+#skills {
+  flex: 1; /* Makes both sections take equal width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Prevent content overflow */
+  padding: 10px; /* Padding for sections */
+  height: 50%; /* Ensures equal height */
+}
+
+/* Title styling for both sections */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack sections vertically on small screens */
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Allow sections to grow based on content */
+  }
+
+  #home,
+  #skills {
+    width: 100%; /* Ensures sections take full width on mobile */
+    height: auto; /* Let sections grow based on content */
+  }
+}

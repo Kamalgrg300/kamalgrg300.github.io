@@ -1,394 +1,264 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-/* Title Styles */
-.title {
-  color: #333;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-/* Header Styles */
-.header {
-  background-color: #4caf50;
-  padding: 1rem;
-  text-align: center;
-  color: white;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-/* Portfolio Container Styles */
-.portfolio {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* Content Container Styles */
-.content-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-}
-
-.content-container img {
-  flex: 1;
-  max-width: 150px;
-  margin-right: 20px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.content-container p {
-  flex: 2;
-}
-
-/* Skills Section Styles */
-.mySkills,
-.coreTechSkills,
+/* Portfolio Section Styling */
 .professionalExperience {
-  text-align: left;
-  margin: 2rem 0;
-}
-
-.mySkills h2,
-.coreTechSkills h2,
-.professionalExperience h2 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.mySkills table,
-.coreTechSkills table {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between; /* Space out the items equally */
+  gap: 20px; /* Add space between items */
   width: 100%;
-  border-collapse: collapse;
+  max-width: 1200px; /* Limit the maximum width of the section */
+  margin: 50px auto; /* Center the section with margin */
 }
 
-.mySkills th,
-.mySkills td,
-.coreTechSkills th,
-.coreTechSkills td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
+/* Experience Item Styling */
+.experience-item {
+  background: #333333;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  flex: 1 1 calc(33.33% - 20px); /* Ensure each item takes up 1/3 of the width, subtracting space for the gap */
+  height: auto; /* Auto height to adjust content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
 }
 
-.mySkills th,
-.coreTechSkills th {
-  background-color: #4caf50;
-  color: white;
+.experience-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
-.mySkills tr:nth-child(even),
-.coreTechSkills tr:nth-child(even) {
-  background-color: #f2f2f2;
+.experience-item h3 {
+  font-size: 1.8rem;
+  color: WHITE;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
-.mySkills tr:hover,
-.coreTechSkills tr:hover {
-  background-color: #ddd;
-}
-
-.mySkills td i {
-  font-size: 1.5rem;
-}
-
-/* Professional Experience Styles */
-.professionalExperience .experience-item {
-  margin-bottom: 2rem;
-}
-
-.professionalExperience h3 {
-  color: #4caf50;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.professionalExperience .duration {
+.experience-item p.duration {
+  font-size: 1rem;
+  color: var(--khaki);
+  margin-bottom: 10px;
   font-style: italic;
-  color: #666;
-  margin-bottom: 1rem;
 }
 
-.professionalExperience ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-}
-
-.professionalExperience ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Picture Styles */
-.myPicture {
-  border-radius: 50%;
-  display: block;
-  margin: 1rem auto;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+/* Unordered List Styles */
+ul {
+  list-style-type: none;
   padding: 0;
-  background-color: #f4f4f4;
 }
 
-/* Title Styles */
-.title {
-  color: #333;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 2.5rem;
-  font-weight: bold;
+ul li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  position: relative;
+  line-height: 1.6;
+  padding-left: 25px;
+  color: var(--khaki);
 }
 
-/* Header Styles */
-.header {
-  background-color: #4caf50;
-  padding: 1rem;
-  text-align: center;
-  color: white;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+ul li::before {
+  content: "•";
+  position: absolute;
+  left: 5px;
+  font-size: 1.5rem;
+  color: var(--non-photo-blue);
 }
 
-/* Portfolio Container Styles */
+/* Add a subtle animation when experience item comes into view */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience-item {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .professionalExperience {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center the items */
+  }
+
+  .experience-item {
+    width: 100%; /* Full width for each item on smaller screens */
+    margin-bottom: 20px; /* Add spacing between items */
+  }
+}
+
+/* project section */
+/* Portfolio Section Styling */
 .portfolio {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  text-align: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Content Container Styles */
-.content-container {
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Professional Experience */
+.professionalExperience {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+/* Experience Item Styling */
+.experience-item {
+  background: #1e2a3a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 10px);
+  transition: all 0.3s ease-in-out;
+  animation: slideIn 0.6s ease-in-out;
+}
+
+.experience-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.experience-item p.duration {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.experience-item ul {
+  list-style-type: none;
+}
+
+.experience-item ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+/* Hover Effect */
+.experience-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Project Section Styling */
+.projects {
+  background: white; /* Gray background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: black; /* White text */
+}
+
+/* Styling for individual project items */
+.project-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  text-align: left;
-}
-
-.content-container img {
-  flex: 1;
-  max-width: 150px;
-  margin-right: 20px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.content-container p {
-  flex: 2;
-}
-
-/* Skills Section Styles */
-.mySkills,
-.coreTechSkills,
-.projects {
-  text-align: left;
-  margin: 2rem 0;
-}
-
-.mySkills h2,
-.coreTechSkills h2,
-.projects h2 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.mySkills table,
-.coreTechSkills table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.mySkills th,
-.mySkills td,
-.coreTechSkills th,
-.coreTechSkills td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
-
-.mySkills th,
-.coreTechSkills th {
-  background-color: #4caf50;
-  color: white;
-}
-
-.mySkills tr:nth-child(even),
-.coreTechSkills tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.mySkills tr:hover,
-.coreTechSkills tr:hover {
-  background-color: #ddd;
-}
-
-.mySkills td i {
-  font-size: 1.5rem;
-}
-
-/* Projects Section Styles */
-.projects {
-  margin: 2rem 0;
-}
-
-.projects h2 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.project-item {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  background-color: #333333; /* Gray background */
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  color: #fff; /* White text */
+}
+
+/* Project Image Styling */
+.project-image {
+  flex: 1;
+  max-width: 200px;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Project Details (Name, Description) */
+.project-details {
+  flex: 2;
+  padding-left: 20px;
 }
 
 .project-item h3 {
-  color: #4caf50;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  color: #fff; /* White text */
+  margin-bottom: 15px;
 }
 
 .project-item ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
+  list-style-type: none;
+  padding-left: 20px;
 }
 
 .project-item ul li {
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #fff; /* White text */
+  margin-bottom: 10px;
 }
 
-/* Picture Styles */
-.myPicture {
-  border-radius: 50%;
-  display: block;
-  margin: 1rem auto;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.project-item ul li:last-child {
+  margin-bottom: 0;
 }
 
-/* Contact Form Styles */
-.contactForm {
-  margin: 2rem 0;
-  text-align: left;
-}
-
-.contactForm h2 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.contactForm form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contactForm label {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.contactForm input[type="text"],
-.contactForm input[type="email"],
-.contactForm input[type="tel"] {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.contactForm input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 4px;
+/* Optional: Adding a subtle hover effect on each list item */
+.project-item ul li:hover {
+  color: gray;
   cursor: pointer;
 }
 
-.contactForm input[type="submit"]:hover {
-  background-color: #45a049;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column;
+    text-align: center;
+  }
 
-/* Contact Form Styles */
-.contactForm {
-  margin: 2rem 0;
-  text-align: left;
-}
+  .project-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 
-.contactForm h2 {
-  color: #333;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
+  .project-details {
+    padding-left: 0;
+  }
 
-.contactForm form {
-  display: flex;
-  flex-direction: column;
-}
+  .project-item h3 {
+    font-size: 1.4rem;
+  }
 
-.contactForm label {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.contactForm input[type="text"],
-.contactForm input[type="email"],
-.contactForm input[type="tel"] {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.contactForm input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.contactForm input[type="submit"]:hover {
-  background-color: #45a049;
+  .project-item ul li {
+    font-size: 1rem;
+  }
 }

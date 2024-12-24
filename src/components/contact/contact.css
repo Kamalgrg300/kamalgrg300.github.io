@@ -1,0 +1,124 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: var(--khaki);
+  color: var(--dark-green);
+}
+
+/* Full-Width Contact Section */
+.contactForm {
+  width: 100%;
+  padding: 50px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--pakistan-green),
+    var(--blue-munsell)
+  );
+  color: var(--khaki);
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contactForm h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--non-photo-blue);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Form Styles */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+  color: var(--non-photo-blue);
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--khaki);
+  color: var(--dark-green);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 15px;
+  margin: 0 auto;
+  background: var(--non-photo-blue);
+  color: var(--pakistan-green);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background: var(--khaki);
+  color: var(--blue-munsell);
+  transform: translateY(-3px);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contactForm {
+    padding: 30px 15px;
+  }
+
+  form {
+    gap: 15px;
+  }
+
+  input[type="submit"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* submut button */
+input[type="submit"] {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Add padding for better size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Text size */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+  transition: background-color 0.3s ease; /* Smooth background change on hover */
+}
+
+input[type="submit"]:hover {
+  background-color: #333; /* Slightly lighter black on hover */
+}
